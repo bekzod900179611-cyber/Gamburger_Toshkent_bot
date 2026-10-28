@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T00:00:00Z",
+  "title": "Design System: Milliy Taomlar",
+  "extensions": {
+    "colorMeta": {
+      "action": { "role": "primary", "displayName": "Roasted Pepper Red", "canonical": "#cc3d16", "tonalRamp": ["#3a1105", "#5e1b08", "#86270c", "#a8310f", "#cc3d16", "#e86a45", "#f4a68e", "#fdece5"] },
+      "action-dark": { "role": "primary", "displayName": "Charred Pepper", "canonical": "#a8310f", "tonalRamp": ["#2e0d04", "#4f1607", "#701f0a", "#a8310f", "#c9532f", "#e08465", "#f0b9a6", "#fbe9e2"] },
+      "action-soft": { "role": "primary", "displayName": "Pepper Blush", "canonical": "#fdece5", "tonalRamp": ["#3a1105", "#86270c", "#cc3d16", "#e86a45", "#f4a68e", "#f9cbbb", "#fdece5", "#fff7f4"] },
+      "saffron": { "role": "secondary", "displayName": "Saffron", "canonical": "#f2a23a", "tonalRamp": ["#3d2304", "#653a08", "#8a5300", "#c27a12", "#f2a23a", "#f6be72", "#fad9aa", "#fdf1dd"] },
+      "saffron-soft": { "role": "secondary", "displayName": "Saffron Cream", "canonical": "#fdf1dd", "tonalRamp": ["#3d2304", "#8a5300", "#c27a12", "#f2a23a", "#f6be72", "#fad9aa", "#fdf1dd", "#fffaf1"] },
+      "success": { "role": "tertiary", "displayName": "Herb Green", "canonical": "#1d8f4e", "tonalRamp": ["#082b17", "#0f4727", "#166a3a", "#1d8f4e", "#3fae6c", "#7ccb9b", "#b6e3c6", "#e3f4ea"] },
+      "success-soft": { "role": "tertiary", "displayName": "Mint Wash", "canonical": "#e3f4ea", "tonalRamp": ["#082b17", "#166a3a", "#1d8f4e", "#3fae6c", "#7ccb9b", "#b6e3c6", "#e3f4ea", "#f4fbf7"] },
+      "bg": { "role": "neutral", "displayName": "Warm Cream", "canonical": "#fffaf3", "tonalRamp": ["#1c1410", "#3b3029", "#6f6359", "#a3978b", "#cfc4b7", "#e8dfd3", "#f3ece2", "#fffaf3"] },
+      "surface": { "role": "neutral", "displayName": "Baked Clay", "canonical": "#f3ece2", "tonalRamp": ["#1c1410", "#3b3029", "#6f6359", "#a3978b", "#cfc4b7", "#e8dfd3", "#f3ece2", "#fffaf3"] },
+      "line": { "role": "neutral", "displayName": "Flour Line", "canonical": "#e8dfd3", "tonalRamp": ["#1c1410", "#3b3029", "#6f6359", "#a3978b", "#cfc4b7", "#e8dfd3", "#f3ece2", "#fffaf3"] },
+      "ink": { "role": "neutral", "displayName": "Charcoal Ink", "canonical": "#1c1410", "tonalRamp": ["#1c1410", "#3b3029", "#6f6359", "#a3978b", "#cfc4b7", "#e8dfd3", "#f3ece2", "#fffaf3"] },
+      "muted": { "role": "neutral", "displayName": "Smoked Taupe", "canonical": "#6f6359", "tonalRamp": ["#1c1410", "#3b3029", "#6f6359", "#a3978b", "#cfc4b7", "#e8dfd3", "#f3ece2", "#fffaf3"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Screen titles and the hero dish name; story titles step up to 30px." },
+      "headline": { "displayName": "Headline", "purpose": "Home section heads; sheet titles at 19px." },
+      "title": { "displayName": "Price", "purpose": "Product price under each card, tabular numerals." },
+      "body": { "displayName": "Body", "purpose": "Inputs and running text; notes at 14px muted." },
+      "body-sm": { "displayName": "Dish Name", "purpose": "Product names, two-line clamp." },
+      "label": { "displayName": "Label", "purpose": "Field labels and small links." },
+      "nav-label": { "displayName": "Nav Label", "purpose": "Bottom navigation tab labels." }
+    },
+    "shadows": [
+      { "name": "card", "value": "0 1px 2px rgb(28 20 16 / 0.04), 0 8px 24px -12px rgb(28 20 16 / 0.18)", "purpose": "Hero card and floating close buttons over photos." },
+      { "name": "float", "value": "0 -8px 28px -14px rgb(28 20 16 / 0.28)", "purpose": "Ink cart bar floating above the bottom nav." },
+      { "name": "action", "value": "0 8px 18px -8px rgb(204 61 22 / 0.55)", "purpose": "Under red primary buttons only; removed when disabled." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Default ease for sheets, rise, pop and bump." },
+      { "name": "sheet-up", "value": "translateY(100%) to 0, 0.42s ease-out-expo", "purpose": "Bottom sheets entering." },
+      { "name": "fade-in", "value": "opacity 0 to 1, 0.22s ease-out", "purpose": "Scrims and story viewer." },
+      { "name": "rise", "value": "opacity 0 + translateY(14px) to rest, 0.5s ease-out-expo, staggered 40ms per item up to 240ms", "purpose": "Product grids and lists appearing after a category or search change." },
+      { "name": "pop", "value": "scale(0.5) + opacity 0 to rest, 0.4s ease-out-expo", "purpose": "Stepper appearing and count changes." },
+      { "name": "bump", "value": "scale 1 to 1.28 to 1, 0.45s ease-out-expo", "purpose": "Cart icon receiving a flown dish." },
+      { "name": "fly-to-cart", "value": "650ms cubic-bezier(0.5, 0, 0.3, 1), arc to cart icon, scale to 0.18", "purpose": "Signature add-to-cart flight of the dish photo." },
+      { "name": "press", "value": "scale(0.97), 150ms", "purpose": "Active state of buttons and tappable tiles." },
+      { "name": "draw-check", "value": "stroke-dashoffset 48 to 0, 0.55s delay 0.25s ease-out-expo", "purpose": "Order confirmed checkmark." }
+    ],
+    "breakpoints": [
+      { "name": "column-max", "value": "512px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Red call to action: checkout, Savatga, confirm.",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg>Savatga</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 48px; padding: 0 20px; border: none; border-radius: 16px; background: var(--color-action, #cc3d16); color: #fff; font-family: Manrope, ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 800; box-shadow: 0 8px 18px -8px rgb(204 61 22 / 0.55); cursor: pointer; transition: background-color 150ms, transform 150ms, box-shadow 150ms; } .ds-btn-primary:active { background: var(--color-action-dark, #a8310f); transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 2.5px solid var(--color-action, #cc3d16); outline-offset: 2px; } .ds-btn-primary:disabled { background: rgb(204 61 22 / 0.45); box-shadow: none; cursor: default; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Clay fill for neutral actions.",
+      "html": "<button class=\"ds-btn-secondary\">Bekor qilish</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 20px; border: none; border-radius: 16px; background: var(--color-surface, #f3ece2); color: var(--color-ink, #1c1410); font-family: Manrope, ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 800; cursor: pointer; transition: background-color 150ms, transform 150ms; } .ds-btn-secondary:active { background: var(--color-line, #e8dfd3); transform: scale(0.97); } .ds-btn-secondary:focus-visible { outline: 2.5px solid var(--color-action, #cc3d16); outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Transparent red text action.",
+      "html": "<button class=\"ds-btn-ghost\">Hammasi</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 20px; border: none; border-radius: 16px; background: transparent; color: var(--color-action, #cc3d16); font-family: Manrope, ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 800; cursor: pointer; transition: background-color 150ms, transform 150ms; } .ds-btn-ghost:active { background: var(--color-action-soft, #fdece5); transform: scale(0.97); } .ds-btn-ghost:focus-visible { outline: 2.5px solid var(--color-action, #cc3d16); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Clay field with muted label; turns white with a red edge on focus.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Telefon raqam</span><input class=\"ds-input\" placeholder=\"+998 90 123 45 67\" /></label>",
+      "css": ".ds-field { display: block; width: 280px; font-family: Manrope, ui-sans-serif, system-ui, sans-serif; } .ds-field-label { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 700; color: var(--color-muted, #6f6359); } .ds-input { width: 100%; height: 48px; padding: 0 16px; border: 1px solid transparent; border-radius: 16px; background: var(--color-surface, #f3ece2); color: var(--color-ink, #1c1410); font: inherit; font-size: 15px; outline: none; transition: background-color 150ms, border-color 150ms, box-shadow 150ms; } .ds-input::placeholder { color: rgb(111 99 89 / 0.8); } .ds-input:focus { background: #fff; border-color: var(--color-action, #cc3d16); box-shadow: 0 0 0 4px rgb(204 61 22 / 0.1); }"
+    },
+    {
+      "name": "Category Chip",
+      "kind": "chip",
+      "refersTo": "chip-category",
+      "description": "Pill filter in the sticky catalog row; selected turns ink.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip is-selected\">Barchasi</button><button class=\"ds-chip\">Milliy taomlar</button><button class=\"ds-chip\">Shashliklar</button></div>",
+      "css": ".ds-chips { display: flex; gap: 8px; } .ds-chip { height: 40px; padding: 0 16px; border: none; border-radius: 9999px; background: var(--color-surface, #f3ece2); color: var(--color-ink, #1c1410); font-family: Manrope, ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 700; white-space: nowrap; cursor: pointer; transition: background-color 150ms, color 150ms; } .ds-chip.is-selected { background: var(--color-ink, #1c1410); color: #fff; } .ds-chip:focus-visible { outline: 2.5px solid var(--color-action, #cc3d16); outline-offset: 2px; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "button-add",
+      "description": "Frameless card: square rounded photo, saffron discount badge, ink price, name, clay add button.",
+      "html": "<article class=\"ds-product\"><div class=\"ds-product-photo\"><span class=\"ds-badge\">−15%</span></div><div class=\"ds-product-price\"><b>42 000 so‘m</b><s>49 000 so‘m</s></div><h3 class=\"ds-product-name\">Manti (5 dona)</h3><button class=\"ds-btn-add\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg>Qo‘shish</button></article>",
+      "css": ".ds-product { width: 158px; display: flex; flex-direction: column; font-family: Manrope, ui-sans-serif, system-ui, sans-serif; color: var(--color-ink, #1c1410); } .ds-product-photo { position: relative; aspect-ratio: 1; border-radius: 22px; background: linear-gradient(135deg, #d9a066, #8a4b22); overflow: hidden; } .ds-badge { position: absolute; top: 10px; left: 10px; padding: 2px 8px; border-radius: 9999px; background: var(--color-saffron, #f2a23a); color: var(--color-ink, #1c1410); font-size: 12px; font-weight: 800; font-variant-numeric: tabular-nums; } .ds-product-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 6px; padding: 10px 2px 0; font-variant-numeric: tabular-nums; } .ds-product-price b { font-size: 17px; font-weight: 800; } .ds-product-price s { font-size: 12.5px; color: var(--color-muted, #6f6359); } .ds-product-name { margin: 2px 2px 0; font-size: 14.5px; line-height: 1.375; font-weight: 600; } .ds-btn-add { margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 6px; height: 40px; width: 100%; border: none; border-radius: 16px; background: var(--color-surface, #f3ece2); color: var(--color-ink, #1c1410); font: inherit; font-size: 14px; font-weight: 800; cursor: pointer; transition: background-color 150ms, transform 150ms; } .ds-btn-add:active { background: var(--color-line, #e8dfd3); transform: scale(0.97); } .ds-btn-add:focus-visible { outline: 2.5px solid var(--color-action, #cc3d16); outline-offset: 2px; }"
+    },
+    {
+      "name": "Action Stepper",
+      "kind": "custom",
+      "refersTo": "stepper-action",
+      "description": "Red quantity pill that replaces the add button once a dish is in the cart.",
+      "html": "<div class=\"ds-stepper\"><button aria-label=\"Kamaytirish\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\"><path d=\"M5 12h14\"/></svg></button><span>2</span><button aria-label=\"Ko‘paytirish\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg></button></div>",
+      "css": ".ds-stepper { display: flex; align-items: center; justify-content: space-between; width: 158px; height: 40px; padding: 0 2px; border-radius: 16px; background: var(--color-action, #cc3d16); color: #fff; font-family: Manrope, ui-sans-serif, system-ui, sans-serif; } .ds-stepper button { display: grid; place-items: center; width: 32px; height: 32px; border: none; border-radius: 9999px; background: transparent; color: inherit; cursor: pointer; transition: transform 150ms; } .ds-stepper button:active { transform: scale(0.9); } .ds-stepper button:focus-visible { outline: 2.5px solid #fff; outline-offset: 1px; } .ds-stepper span { min-width: 24px; text-align: center; font-size: 14px; font-weight: 800; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Bottom Navigation",
+      "kind": "nav",
+      "refersTo": "nav-label",
+      "description": "Fixed four-tab bar; active tab red, cart carries the count badge and receives the fly-to-cart bump.",
+      "html": "<nav class=\"ds-nav\"><button class=\"ds-tab is-active\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z\"/></svg><span>Bosh sahifa</span></button><button class=\"ds-tab\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14zM20 20l-3.5-3.5\"/></svg><span>Katalog</span></button><button class=\"ds-tab\"><i class=\"ds-cart\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9zM9 8V6.5a3 3 0 0 1 6 0V8\"/></svg><b>3</b></i><span>Savatcha</span></button><button class=\"ds-tab\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4.5 20.5c1.3-3.5 4.2-5.5 7.5-5.5s6.2 2 7.5 5.5\"/></svg><span>Profil</span></button></nav>",
+      "css": ".ds-nav { display: grid; grid-template-columns: repeat(4, 1fr); width: 375px; height: 64px; border-top: 1px solid var(--color-line, #e8dfd3); background: rgb(255 250 243 / 0.95); backdrop-filter: blur(12px); font-family: Manrope, ui-sans-serif, system-ui, sans-serif; } .ds-tab { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border: none; background: none; color: var(--color-muted, #6f6359); cursor: pointer; transition: color 150ms; } .ds-tab span { font-size: 11px; font-weight: 700; } .ds-tab.is-active { color: var(--color-action, #cc3d16); } .ds-tab:focus-visible { outline: 2.5px solid var(--color-action, #cc3d16); outline-offset: -4px; border-radius: 12px; } .ds-cart { position: relative; display: block; font-style: normal; } .ds-cart b { position: absolute; top: -6px; right: -10px; display: grid; place-items: center; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9999px; background: var(--color-action, #cc3d16); color: #fff; font-size: 10.5px; font-weight: 800; box-shadow: 0 0 0 2px #fff; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Floating Cart Bar",
+      "kind": "custom",
+      "refersTo": "cart-bar",
+      "description": "Ink bar above the nav showing count and white-on-ink total; opens the cart.",
+      "html": "<button class=\"ds-cartbar\"><span>Savatcha · 3 ta</span><b>126 000 so‘m</b></button>",
+      "css": ".ds-cartbar { display: flex; align-items: center; justify-content: space-between; width: 343px; height: 56px; padding: 0 20px; border: none; border-radius: 16px; background: var(--color-ink, #1c1410); color: #fff; font-family: Manrope, ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; box-shadow: 0 -8px 28px -14px rgb(28 20 16 / 0.28); cursor: pointer; transition: transform 150ms; } .ds-cartbar b { font-weight: 800; font-variant-numeric: tabular-nums; } .ds-cartbar:active { transform: scale(0.98); } .ds-cartbar:focus-visible { outline: 2.5px solid var(--color-action, #cc3d16); outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Warm Counter",
+    "overview": "A modern delivery app in the category standard, built for a hungry person holding a phone inside Telegram (~375px). The photograph of the dish is the loudest thing on every screen; everything else is a quiet, warm counter it sits on. Surfaces are cream and baked-clay neutrals, type is a single heavy Manrope voice in charcoal, and exactly one hot colour, roasted-pepper red, marks the things you can press.\n\nDensity is phone-native: one 16px gutter, a two-column product grid, horizontal photo rails, and a bottom navigation that never leaves. Depth is soft and warm-tinted, never grey. Motion is small and purposeful: cards rise into place, counts pop, sheets slide up on an expo ease, and the one signature move (the dish photo flying into the cart) ties adding to the bag you can see.",
+    "keyCharacteristics": [
+      "Full-bleed food photography with large rounded corners carries the decision.",
+      "Cream page with a slightly darker clay surface for fills; no grey card walls.",
+      "One action red for tappable things; prices and money are ink.",
+      "Saffron only for discount marks; green only for success and free delivery.",
+      "Single typeface (Manrope), extra-bold headings with tight tracking, tabular numerals for money.",
+      "Line icons on a 24px grid, stroke 2, round caps and joins."
+    ],
+    "rules": [
+      { "name": "The Hot Plate Rule", "body": "Red fills and red text mean \"press this\". Prices, totals and every sum of money are ink, never red.", "section": "colors" },
+      { "name": "The Saffron Sticker Rule", "body": "Saffron marks a discount; it never fills a button or colours a heading.", "section": "colors" },
+      { "name": "The Tabular Money Rule", "body": "Every sum, count and quantity uses tabular numerals so figures don't jitter as steppers change.", "section": "typography" },
+      { "name": "The Warm Shadow Rule", "body": "Shadows are tinted with ink or pepper red, soft and negative-spread; there are no hard or grey shadows.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do let a full-bleed dish photo lead every product surface, at the card radius (22px) or larger.",
+      "Do keep red fills and red text for tappable things, and set prices and totals in ink with tabular numerals.",
+      "Do use saffron for discounts and green for success or free delivery.",
+      "Do use the shared line icon set (24px grid, stroke 2, round caps and joins) and draw new icons in the same style.",
+      "Do animate with the expo ease (cubic-bezier(0.16, 1, 0.3, 1)): rise for lists, pop for counts, sheet-up for sheets, and honour reduced motion.",
+      "Do tint shadows from ink or red, soft and negative-spread."
+    ],
+    "donts": [
+      "Don't colour prices, totals or sums of money red.",
+      "Don't use emoji as decoration or icons.",
+      "Don't build walls of framed grey cards; products sit on the cream page with the photo as the card.",
+      "Don't add kicker or eyebrow lines above headings.",
+      "Don't invent ratings, review counts or order statistics on any surface."
+    ]
+  }
+}

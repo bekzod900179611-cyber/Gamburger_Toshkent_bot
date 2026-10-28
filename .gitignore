@@ -1,0 +1,15 @@
+node_modules/
+.env
+data/*.db
+data/*.db-*
+
+# Mini App build natijasi — serverda qayta yig'iladi
+web/out/
+web/.next/
+
+# Lokal dizayn ish fayllari
+.impeccable/review/
+.impeccable/questions/
+.impeccable/decision-direction.json
+.impeccable/brief-body.md
+render-env.txt

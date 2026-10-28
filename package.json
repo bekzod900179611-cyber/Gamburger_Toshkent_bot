@@ -1,0 +1,26 @@
+{
+  "name": "gamburger-dostavka",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Fast food yetkazib berish — Telegram bot va Mini App uchun API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "tunnel": "node scripts/tunnel.mjs",
+    "build:web": "npm --prefix web run build",
+    "db:init": "node src/database/init.js",
+    "db:seed": "node src/database/seed.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "telegraf": "^4.16.3"
+  }
+}

@@ -1,0 +1,37 @@
+# Render Blueprint — bitta servis: API + Telegram webhook + Mini App (web/out)
+services:
+  - type: web
+    name: gamburger
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install && npm install --prefix web --include=dev && npm run build:web
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 22.12.0
+      - key: ALLOW_DEV_AUTH
+        value: "false"
+      - key: TELEGRAM_WEBHOOK_SECRET
+        generateValue: true
+      - key: BOT_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_CHAT_ID
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: DELIVERY_FEE
+        value: "10000"
+      - key: FREE_DELIVERY_FROM
+        value: "200000"
+      - key: RESTAURANT_NAME
+        value: Gamburger
+      - key: RESTAURANT_PHONE
+        value: +998 90 123 45 67
+      - key: RESTAURANT_ADDRESS
+        value: Toshkent sh., Amir Temur ko'chasi, 1
