@@ -1,4 +1,15 @@
 import 'dotenv/config';
+import crypto from 'node:crypto';
+
+/**
+ * Telegram webhook kaliti faqat A-Z a-z 0-9 _ - bo'lishi mumkin, Render esa generateValue bilan
+ * "+/=" li qiymat yaratadi. Shuning uchun har qanday qiymatdan xavfsiz hex kalit hosil qilamiz.
+ */
+const webhookSecret = (raw) => {
+  const value = String(raw || '').trim();
+  if (!value) return '';
+  return /^[A-Za-z0-9_-]{1,256}$/.test(value) ? value : crypto.createHash('sha256').update(value).digest('hex');
+};
 
 const toBool = (value, fallback = false) => {
   if (value === undefined || value === null || value === '') return fallback;
@@ -33,7 +44,7 @@ const config = {
     webAppUrl: String(process.env.WEBAPP_URL || hostedUrl).trim().replace(/\/+$/, ''),
     // Bo'sh bo'lsa bot polling rejimida ishlaydi (lokal). To'ldirilsa — webhook: <WEBHOOK_URL>/api/telegram
     webhookUrl: String(process.env.WEBHOOK_URL || hostedUrl).trim().replace(/\/+$/, ''),
-    webhookSecret: process.env.TELEGRAM_WEBHOOK_SECRET || '',
+    webhookSecret: webhookSecret(process.env.TELEGRAM_WEBHOOK_SECRET),
   },
 
   database: {
