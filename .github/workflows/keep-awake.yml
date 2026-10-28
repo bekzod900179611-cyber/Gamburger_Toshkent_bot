@@ -1,0 +1,18 @@
+# Render'ning bepul serveri 15 daqiqa so'rov bo'lmasa uxlab qoladi va birinchi xabarga
+# ~50 soniyada javob beradi. Bu workflow har ~10 daqiqada /api/health ni chaqirib, serverni uyg'oq tutadi.
+# Eslatma: GitHub 60 kun commit bo'lmagan repoda jadvalli workflow'ni to'xtatadi (email yuboradi) —
+# Actions bo'limida "Enable workflow" bosilsa qayta yoqiladi.
+name: Serverni uyg'oq tutish
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Ping /api/health
+        run: curl --silent --show-error --fail --retry 3 --retry-delay 20 --max-time 90 https://gamburger.onrender.com/api/health
